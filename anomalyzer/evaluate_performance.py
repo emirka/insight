@@ -14,7 +14,7 @@ Inputs:
     
     dec_digits (optional) = number of decimal points to use in displaying scores
     
-    pos_label (optional) = the positive class of interest that will be evaluated in the precision, recall and f-1 score metrics
+    pos_label (optional) = the positive class of interest (e.g., anomaly) that will be evaluated in the precision, recall and f-1 score metrics
     
     
 Outputs:
@@ -32,7 +32,7 @@ Outputs:
 import numpy as np
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score, roc_auc_score
 
-def evaluate_performance(y,y_pred,dec_digits=3,pos_label=-1):
+def evaluate_performance(y,y_pred,dec_digits=3,pos_label=0):
      print("Accuracy: {0}".format(round(accuracy_score(y,y_pred),dec_digits)))
      print("Precision: {0}".format(round(precision_score(y,y_pred,pos_label=pos_label,average='binary'),dec_digits)))
      print("Recall: {0}".format(round(recall_score(y,y_pred,pos_label=pos_label,average='binary'),dec_digits)))
