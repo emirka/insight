@@ -1,4 +1,4 @@
-# Insight project directory!
+# Insight project directory
 
 Anomalizer
 
