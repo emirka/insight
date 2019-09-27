@@ -1,8 +1,6 @@
-# Insight project directory
+# Network Anomalyzer
 
-NetworkAnomalyzer
-
-Computer networks are constantly subjected to attacks which can effectively cripple a business' ability to function. Cyber attacks are hard to detect but are also costly to miss.
+Computer networks are constantly subjected to attacks which can effectively cripple a business' ability to function. Cyber attacks are hard to detect but are also costly to miss. The average cost of a single cyber attack on an enterprise network was estimated to be $1.3M in 2017.
 
 This project uses anomaly detection, in particular novelty detection, to alert network administrators and security experts when a network is potentially under attack. The dataset used is the Canadian Institute of Cybersecurity Intrusion Detection Evaluation Dataset (CICID S2017).
 
