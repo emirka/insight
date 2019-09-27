@@ -22,6 +22,6 @@ To work this webapp needs to have Voila, ipywidgets and plotly installed upon a 
 
 You can install them using:
 
-  pip install voila
-  pip install ipywidgets
-  pip install plotly
+  "pip install voila"
+  "pip install ipywidgets"
+  "pip install plotly"
