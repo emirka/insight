@@ -16,12 +16,12 @@ The webapp by default uses the saved predictions to visualize. You can also pred
 
 To run the webapp you need to enter the following command on your terminal
 
-    "voila dashboard.ipynb"
+    voila dashboard.ipynb
     
 To work this webapp needs to have Voila, ipywidgets and plotly installed upon a standard Anaconda installation.
 
 You can install them using:
 
-  "pip install voila"
-  "pip install ipywidgets"
-  "pip install plotly"
+    pip install voila
+    pip install ipywidgets
+    pip install plotly"
