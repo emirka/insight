@@ -5,8 +5,6 @@ Created on Fri Sep 13 14:15:10 2019
 @author: emirk
 
 
-
-
 Method: loader(day_of_week,data_type,subtype)
 
 Returns the path of data file to be loaded
@@ -24,6 +22,26 @@ Output: Data file to be loaded.
 
 
 
+Method: all_day_loader(method)
+
+
+Prepares the dataset for classification. Takes training data from all 3 days (Monday,Tuesday & Wednesday) and leaves test data for Tuesday and Wednesday (days with cyber attacks)
+
+Inputs:
+       
+    test_frac (default value = 0.2) = Fraction of the data on test days that will be set aside for testing
+      
+    
+Output (train_data, tue_test_data, wed_test_data)
+
+    train_data: Train set consisting of Monday, Tuesday & Wednesday data
+        
+    tue_test_data: Tuesday test set
+    
+    tue_test_data: Wednesday test set
+
+
+
 Method: novelty_detection_preparation(method)
 
 
@@ -35,18 +53,17 @@ Days to consider:
 - Wednesday (64% benign)
 
 Inputs:
-
        
     method (default value ='Anomaly') = Can be either 'Anomaly' or 'Mixed'. If 'Anomaly', all BENIGN traffic will be used for training and all ANOMALY traffic will be used for testing
       
     
 Output (train_data, tue_test_data, wed_test_data)
 
-    train_data: The features of the dataset
+    train_data: Train set consisting of BENIGN data from Monday, Tuesday & Wednesday data
         
-    tue_test_data: Class labels of the dataset 
+    tue_test_data: Test set for Tuesday, composition depends on the method
     
-    tue_test_data: Class labels of the dataset 
+    tue_test_data: Test set for Wednesday, composition depends on the method
 
 """
 
@@ -61,6 +78,25 @@ def loader(day_of_week='Tuesday',data_type='processed',subtype='Normalized'):
     file_name=day_of_week+'_'+data_type+'.pkl'
 
     return os.path.join(data_directory,file_name)
+
+
+
+def all_day_loader(test_frac=0.2): 
+    data_file = loader(day_of_week='Monday',data_type='processed',subtype='Normalized')
+    Mon_data = pd.read_pickle(data_file)
+
+    data_file = loader(day_of_week='Tuesday',data_type='processed',subtype='Normalized')
+    Tue_data = pd.read_pickle(data_file)
+    data_file = loader(day_of_week='Wednesday',data_type='processed',subtype='Normalized')
+    Wed_data = pd.read_pickle(data_file)
+   
+    tue_train_data, tue_test_data = train_test_split(Tue_data,test_size=test_frac,random_state=42)
+    wed_train_data, wed_test_data = train_test_split(Wed_data,test_size=test_frac,random_state=42)
+    
+    train_data = pd.concat([Mon_data,tue_train_data,wed_train_data],axis=0)        
+   
+    return train_data, tue_test_data, wed_test_data
+
 
 
 def novelty_detection_preparation(method='Anomaly'):
