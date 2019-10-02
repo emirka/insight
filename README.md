@@ -1,6 +1,7 @@
 <p class="aligncenter">
-<img src="./webapp/figures/header2.png" align="middle" >
+<img src="./webapp/figures/header.png" align="middle" >
 </p>
+
 
 Computer networks are constantly subjected to attacks which can effectively cripple a business' ability to function. Cyber attacks are hard to detect but are also costly to miss. The average cost of a single cyber attack on an enterprise network was estimated to be $1.3M in 2017.
 
