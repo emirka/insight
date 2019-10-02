@@ -1,5 +1,5 @@
 <p class="aligncenter">
-<img src="./webapp/figures/header.png" align="middle" >
+<img src="./webapp/figures/header.jpg" align="middle" >
 </p>
 
 
