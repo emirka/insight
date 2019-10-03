@@ -2,12 +2,17 @@
 <img src="./webapp/figures/header.jpg" align="middle" >
 </p>
 
+## Problem
 
 Computer networks are constantly subjected to attacks which can effectively cripple a business' ability to function. Cyber attacks are hard to detect but are also costly to miss. The average cost of a single cyber attack on an enterprise network was estimated to be $1.3M in 2017.
+
+#Dataset and Methodology
 
 This project uses anomaly detection, in particular novelty detection, to alert network administrators and security experts when a network is potentially under attack. The dataset used is the Canadian Institute of Cybersecurity Intrusion Detection Evaluation Dataset (CICID S2017).
 
 The dataset represents 3 days worth of network traffic activity, 2 days of which included the following cyber attacks: Brute Force, Denial of Service (DoS), Distributed Denial of Service (DDoS).
+
+## Front End
 
 The project has a working webapp that can be used as a dashboard to visualize anomalies in the network traffic.
 
@@ -31,5 +36,8 @@ You can also find the full environment in the _requirements.txt_ file under the 
 
     conda create --name myenv --file requirements.txt
 
+You can find a hosted version of the webapp [here](http://flagit.live:8866/). Below is a screenshot of the webapp dashboard.
 
-You can find a hosted version of the webapp [here](http://flagit.live:8866/).
+<p class="aligncenter">
+<img src="./webapp/figures/screenshot.png" align="middle" >
+</p>
