@@ -10,17 +10,17 @@ Inputs:
     
     data = Data frame to be prepared
        
-    class_column (default value ='Label') = Name of the column containing the class labels (must be a string)
+    class_column (optional, default value ='Label') = Name of the column containing the class labels (must be a string)
       
-    classes (default value= 'binary')     = If the type of job is classification, how many class to work with. Either 'binary' or 'multi'
+    classes (optional, default value= 'binary')     = If the type of job is classification, how many class to work with. Either 'binary' or 'multi'
     
-    neg_class (defualt '') = specificy the negative class (if 'binary)
+    neg_class (optional, default '') = specificy the negative class (WARNING: Only if 'binary')
     
 Output (X,y)
 
-    X: The features of the dataset
+    X: Numpy array containing features of the dataset
         
-    y: Class labels of the dataset 
+    y: Numpy array of class labels from the dataset 
 
 """
 import pandas as pd

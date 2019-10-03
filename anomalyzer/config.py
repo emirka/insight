@@ -15,17 +15,17 @@ Inputs:
     
     data_type (default='processed') =  Input which data type to be loaded ('processed', 'cleaned' or 'raw')
     
-    subtype (default='Normalized) = Input which data subtype to be loaded ('Normalized' or 'Reduced'). WARNING: Only use this if data type is 'processed'
+    subtype (default='Normalized') = Input which data subtype to be loaded ('Normalized' or 'Reduced'). WARNING: Only use this if data type is 'processed'
 
 
-Output: Data file to be loaded. 
+Output: Returns the path to the data file to be loaded. 
 
 
 
-Method: all_day_loader(method)
+Method: all_day_loader(test_frac)
 
 
-Prepares the dataset for classification. Takes training data from all 3 days (Monday,Tuesday & Wednesday) and leaves test data for Tuesday and Wednesday (days with cyber attacks)
+Prepares the dataset for classification. Takes training data from all 3 days (Monday,Tuesday & Wednesday) and leaves test data for Tuesday and Wednesday (days with attacks)
 
 Inputs:
        
@@ -34,9 +34,9 @@ Inputs:
     
 Output (train_data, tue_test_data, wed_test_data)
 
-    train_data: Train set consisting of Monday, Tuesday & Wednesday data
+    train_data:  Train set consisting of Monday, Tuesday & Wednesday data
         
-    tue_test_data: Tuesday test set
+    tue_test_data: Tuesday test set 
     
     tue_test_data: Wednesday test set
 
