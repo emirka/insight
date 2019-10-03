@@ -50,7 +50,7 @@ Among the novelty detection methods implemented (see [8_Novelty_Detection](https
 To verify the performance of novelty detection, a supervised classifier (XGBoost) was also trained on the dataset. See the notebook [4a_XGBoost_AllDays](https://github.com/emirka/insight/blob/master/notebooks/4a_XGBoost_All_Days.ipynb) for detailed documentation. Below are the high level results of the XGBoost algorithm, indicating that the performance of novelty detection is not vastly different than a supervised algorithm making full use of the labeled data:
 
 <p class="aligncenter">
-<img src="./webapp/figures/xgboost_results.jpg" align="middle" >
+<img src="./webapp/figures/xgboost_results.PNG" align="middle" >
 </p>
 
 ## Front End
