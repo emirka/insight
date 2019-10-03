@@ -39,5 +39,5 @@ You can also find the full environment in the _requirements.txt_ file under the 
 You can find a hosted version of the webapp [here](http://flagit.live:8866/). Below is a screenshot of the webapp dashboard.
 
 <p class="aligncenter">
-<img src="./webapp/figures/screenshot.png" align="middle" >
+<img src="./webapp/figures/screenshot.PNG" align="middle" >
 </p>
