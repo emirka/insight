@@ -27,4 +27,4 @@ You can install them using:
     pip install ipywidgets
     pip install plotly"
 
-You can find a hosted version of the webapp [here](http://networkanomalyzer.info:8866/).
+You can find a hosted version of the webapp [here](http://flagit.live:8866/).
