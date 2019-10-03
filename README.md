@@ -26,5 +26,10 @@ You can install them using:
     pip install voila
     pip install ipywidgets
     pip install plotly"
+    
+You can also find the full environment in the _requirements.txt_ file under the root directory. You can clone a virtual conda environment using the following command (change _myenv_ to desired environment name):
+
+    conda create --name myenv --file requirements.txt
+
 
 You can find a hosted version of the webapp [here](http://flagit.live:8866/).
